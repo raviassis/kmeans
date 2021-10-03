@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public interface Elemento {
+    
     static List<Double> calcularMedia(List<Elemento> elementos) {
         var somatorio = new ArrayList<Double>();
         for(var elem : elementos) {
@@ -29,7 +30,7 @@ public interface Elemento {
     /**
      * Distancia euclidiana entre elementos
      * @param elemento
-     * @return
+     * @return distancia entre os elementos
      */
     double distancia(Elemento elemento);
 }
