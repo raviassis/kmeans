@@ -13,11 +13,12 @@ public class Centroide {
         return parametros;
     }
 
-    public void setParametros(List<Double> parametros) {
+    void setParametros(List<Double> parametros) {
         this.parametros = parametros;
     }
 
-    public Elemento getElemento() {
+    Elemento getElemento() {
+        var c = this;
         return new Elemento() {
             @Override
             public List<Double> getParametros() {
@@ -26,12 +27,12 @@ public class Centroide {
 
             @Override
             public Elemento clone() {
-                return null;
+                return c.getElemento();
             }
 
             @Override
             public double distancia(Elemento elemento) {
-                return 0;
+                return elemento.distancia(c.getElemento());
             }
         };
     }
