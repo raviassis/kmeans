@@ -23,6 +23,7 @@ public class Main {
 
         var kmeans = new Kmeans(qntCentroides, iteracoes, elementos);
         kmeans.run();
+        System.out.println(KmeansToStringConverter.convert(kmeans));
         System.out.println("End");
     }
 }

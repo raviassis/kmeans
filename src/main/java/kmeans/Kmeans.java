@@ -7,7 +7,7 @@ public class Kmeans {
     private final int iteracoes;
     private List<Centroide> centroides;
     private List<Elemento> elementos;
-    private HashMap<Centroide, List<Elemento>> agrupamentos;
+    private Map<Centroide, List<Elemento>> agrupamentos;
 
     public Kmeans(int qntCentroides, int iteracoes, List<Elemento> elementos) {
         this.elementos = elementos;
@@ -58,5 +58,9 @@ public class Kmeans {
             this.agrupamentos = agrupamentos;
 
         }
+    }
+
+    public Map<Centroide, List<Elemento>> getAgrupamentos() {
+        return agrupamentos;
     }
 }

@@ -2,10 +2,10 @@ package kmeans;
 
 import java.util.List;
 
-class Centroide {
+public class Centroide {
     private List<Double> parametros;
 
-    public Centroide(List<Double> parametros) {
+    Centroide(List<Double> parametros) {
         this.parametros = parametros;
     }
 
